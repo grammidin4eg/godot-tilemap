@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bte3c36ykcjic"]
+
+[ext_resource type="Script" path="res://scenes/ui.gd" id="1_87hqn"]
+[ext_resource type="Texture2D" uid="uid://b8f1s0lxyyrp6" path="res://images/health_box.png" id="1_bh001"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4hc2"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+
+[node name="UI (CanvasLayer)" type="CanvasLayer"]
+script = ExtResource("1_87hqn")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a4hc2")
+
+[node name="HealthBox" type="Sprite2D" parent="Panel"]
+position = Vector2(31, 24)
+texture = ExtResource("1_bh001")
+
+[node name="HealthLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 5.0
+offset_right = 130.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+text = "100"

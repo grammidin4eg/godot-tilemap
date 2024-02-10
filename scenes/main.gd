@@ -10,3 +10,9 @@ func _on_item_area_2d_on_pick():
 	print("_on_health_pic")
 	health += 1
 	$UI.set_health(health)
+
+
+func _on_trap_body_entered(body):
+	print("hit")
+	health -= 1
+	$UI.set_health(health)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://w2k53n4vxb8a"]
+
+[ext_resource type="Texture2D" uid="uid://nt231vei65kf" path="res://images/blade.png" id="1_myg7w"]
+[ext_resource type="Script" path="res://scenes/trap.gd" id="1_pujpr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3b7l8"]
+radius = 40.3113
+
+[node name="Trap" type="Area2D"]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_pujpr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_myg7w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3b7l8")

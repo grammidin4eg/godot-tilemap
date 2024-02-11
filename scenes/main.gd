@@ -1,18 +1,12 @@
 extends Node2D
 
-var health: int
-
-func _ready():
-	health = 3
-	$UI.set_health(health)
-
-func _on_item_area_2d_on_pick():
-	print("_on_health_pic")
-	health += 1
-	$UI.set_health(health)
-
 
 func _on_trap_body_entered(body):
 	print("hit")
-	health -= 1
-	$UI.set_health(health)
+	# health -= 1
+	#$UI.set_health(health)
+
+
+
+func _on_player_change_health(value):
+	$UI.set_health(value)

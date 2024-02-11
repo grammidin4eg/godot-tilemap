@@ -1,7 +1,22 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
+
+signal change_health(value)
+
+var health: int = 0: get = _get_health, set = _set_health
+
+func _get_health() -> int:
+	return health
+
+func _set_health(value: int) -> void:
+	health = value
+	change_health.emit(value)
+	if health < 1:
+		queue_free()
+
+func _ready():
+	health = 3;
 
 func _set_animation(action: String):
 	if Input.is_action_pressed(action):

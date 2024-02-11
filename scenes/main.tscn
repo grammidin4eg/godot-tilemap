@@ -320,8 +320,4 @@ script = ExtResource("6_jotr1")
 position = Vector2(1, -4)
 rotation = 1.5708
 
-[connection signal="on_pick" from="Item (Area2D)" to="." method="_on_item_area_2d_on_pick"]
-[connection signal="on_pick" from="Item (Area2D)2" to="." method="_on_item_area_2d_on_pick"]
-[connection signal="on_pick" from="Item (Area2D)3" to="." method="_on_item_area_2d_on_pick"]
-[connection signal="on_pick" from="Item (Area2D)4" to="." method="_on_item_area_2d_on_pick"]
-[connection signal="body_entered" from="Path2D/PathFollow2D/Trap" to="." method="_on_trap_body_entered"]
+[connection signal="change_health" from="Player" to="." method="_on_player_change_health"]

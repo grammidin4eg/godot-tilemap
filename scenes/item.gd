@@ -1,7 +1,5 @@
 extends Area2D
 
-signal on_pick
-
-func _on_body_entered(body):
+func _on_body_entered(player):
 	queue_free()
-	on_pick.emit()
+	player.health += 1

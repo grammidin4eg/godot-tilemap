@@ -2,11 +2,10 @@ extends Area2D
 
 const ANGULAR_SPEED = PI * 2
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	rotation += ANGULAR_SPEED * delta
+
+
+func _on_body_entered(player):
+	player.health -= 1

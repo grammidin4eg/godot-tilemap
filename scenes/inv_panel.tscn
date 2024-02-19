@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ke8lr7gotjnh"]
+
+[node name="InvPanel" type="Panel"]
+offset_right = 488.0
+offset_bottom = 494.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

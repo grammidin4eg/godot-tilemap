@@ -1,10 +1,122 @@
-[gd_scene format=3 uid="uid://ke8lr7gotjnh"]
+[gd_scene load_steps=4 format=3 uid="uid://ke8lr7gotjnh"]
+
+[ext_resource type="PackedScene" uid="uid://cjktmypojkstv" path="res://scenes/inv_slot.tscn" id="1_ugp86"]
+[ext_resource type="Script" path="res://scenes/inv_panel.gd" id="1_xb1kq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmkt8"]
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0431373, 0.0431373, 0.0431373, 1)
 
 [node name="InvPanel" type="Panel"]
-offset_right = 488.0
-offset_bottom = 494.0
+offset_right = 275.0
+offset_bottom = 229.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nmkt8")
+script = ExtResource("1_xb1kq")
 
 [node name="GridContainer" type="GridContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+
+[node name="inv_slot" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot2" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot3" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot4" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot5" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot6" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot7" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot8" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot9" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot10" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot11" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot12" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot13" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot14" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot15" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot16" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot17" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot18" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot19" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot20" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot21" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot22" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot23" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot24" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot25" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot26" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot27" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot28" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot29" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2
+
+[node name="inv_slot30" parent="GridContainer" instance=ExtResource("1_ugp86")]
+layout_mode = 2

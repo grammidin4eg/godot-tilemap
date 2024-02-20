@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://oowpdeeqe02h"]
+[gd_scene load_steps=13 format=3 uid="uid://oowpdeeqe02h"]
 
 [ext_resource type="Texture2D" uid="uid://c6tprisp2wtj6" path="res://images/tile-set.png" id="1_a75g3"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_rso1x"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://belaacqa8dihs" path="res://scenes/item.tscn" id="5_7rue4"]
 [ext_resource type="Script" path="res://scenes/PathFollow2D.gd" id="6_jotr1"]
 [ext_resource type="PackedScene" uid="uid://w2k53n4vxb8a" path="res://scenes/trap.tscn" id="6_v6ur5"]
+[ext_resource type="PackedScene" uid="uid://ke8lr7gotjnh" path="res://scenes/inv_panel.tscn" id="8_0et5f"]
+[ext_resource type="Script" path="res://scenes/InventoryLayer.gd" id="8_haeur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2qgr"]
 resource_name = "Атлас"
@@ -319,5 +321,21 @@ script = ExtResource("6_jotr1")
 [node name="Trap" parent="Path2D/PathFollow2D" instance=ExtResource("6_v6ur5")]
 position = Vector2(1, -4)
 rotation = 1.5708
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("8_haeur")
+
+[node name="InvPanel" parent="CanvasLayer" instance=ExtResource("8_0et5f")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -306.0
+offset_top = -257.0
+offset_right = -31.0
+offset_bottom = -28.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [connection signal="change_health" from="Player" to="." method="_on_player_change_health"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dup78e1bt2hh5"]
+[gd_scene load_steps=19 format=3 uid="uid://dup78e1bt2hh5"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_cn6pg"]
 [ext_resource type="Texture2D" uid="uid://b2ggs7mmog43f" path="res://images/jrpg.png" id="1_fas2a"]
+[ext_resource type="Resource" uid="uid://dhtpmibv2kf8o" path="res://inventory/inventory_res.tres" id="2_fxcua"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gv236"]
 atlas = ExtResource("1_fas2a")
@@ -129,6 +130,7 @@ size = Vector2(46, 53)
 collision_layer = 4
 collision_mask = 10
 script = ExtResource("1_cn6pg")
+inventory = ExtResource("2_fxcua")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2142y")

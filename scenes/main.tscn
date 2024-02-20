@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://belaacqa8dihs" path="res://scenes/item.tscn" id="5_7rue4"]
 [ext_resource type="Script" path="res://scenes/PathFollow2D.gd" id="6_jotr1"]
 [ext_resource type="PackedScene" uid="uid://w2k53n4vxb8a" path="res://scenes/trap.tscn" id="6_v6ur5"]
-[ext_resource type="PackedScene" uid="uid://ke8lr7gotjnh" path="res://scenes/inv_panel.tscn" id="8_0et5f"]
-[ext_resource type="Script" path="res://scenes/InventoryLayer.gd" id="8_haeur"]
+[ext_resource type="PackedScene" uid="uid://ke8lr7gotjnh" path="res://inventory/inv_panel.tscn" id="8_0et5f"]
+[ext_resource type="Script" path="res://inventory/InventoryLayer.gd" id="8_haeur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2qgr"]
 resource_name = "Атлас"

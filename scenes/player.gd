@@ -4,6 +4,8 @@ const SPEED = 300.0
 
 signal change_health(value)
 
+@export var inventory: Inventory
+
 var health: int = 0: get = _get_health, set = _set_health
 
 func _get_health() -> int:

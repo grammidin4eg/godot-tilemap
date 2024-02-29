@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://kocdnotivy0m"]
+
+[ext_resource type="Script" path="res://inventory/item.gd" id="1_d2trh"]
+[ext_resource type="Resource" uid="uid://ciay72ilpbf5d" path="res://inventory/life_potion.tres" id="2_guge5"]
+[ext_resource type="Texture2D" uid="uid://xamycjcpe0l8" path="res://images/some_item.png" id="3_8yp0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7o15"]
+size = Vector2(40, 50)
+
+[node name="Item (Area2D)" type="Area2D"]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_d2trh")
+item = ExtResource("2_guge5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p7o15")
+
+[node name="sprite" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_8yp0j")
+
+[connection signal="body_entered" from="." to="." method="_on_player_entered"]

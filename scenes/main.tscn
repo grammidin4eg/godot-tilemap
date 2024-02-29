@@ -363,6 +363,7 @@ position = Vector2(1015, 438)
 item = ExtResource("11_xtdwd")
 
 [connection signal="change_health" from="Player" to="." method="_on_player_change_health"]
+[connection signal="use_item" from="CanvasLayer/InvPanel" to="." method="_on_inv_panel_use_item"]
 [connection signal="take_item" from="lifepotion" to="CanvasLayer/InvPanel" method="_on_item_take_item"]
 [connection signal="take_item" from="lifepotion2" to="CanvasLayer/InvPanel" method="_on_item_take_item"]
 [connection signal="take_item" from="lifepotion3" to="CanvasLayer/InvPanel" method="_on_item_take_item"]

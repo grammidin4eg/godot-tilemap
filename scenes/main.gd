@@ -10,3 +10,12 @@ func _on_trap_body_entered(body):
 
 func _on_player_change_health(value):
 	$UI.set_health(value)
+
+
+func _on_inv_panel_use_item(item: InventoryItem):
+	print("use item: ", item.name)
+	match item.name:
+		'lifepotion':
+			$Player.health += 1
+		'poison_potion':
+			$Player.health -= 1

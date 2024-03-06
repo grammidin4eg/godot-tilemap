@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjktmypojkstv"]
+[gd_scene load_steps=3 format=3 uid="uid://cjktmypojkstv"]
 
 [ext_resource type="Texture2D" uid="uid://ckt5q63hoevl2" path="res://images/inventorySlot.png" id="1_lvrkq"]
 [ext_resource type="Script" path="res://inventory/inv_slot.gd" id="1_m5ry0"]
-[ext_resource type="Script" path="res://inventory/inv_slot_item.gd" id="3_t5qxk"]
-[ext_resource type="Texture2D" uid="uid://c75wf8vw1iugq" path="res://images/slot_select.png" id="4_7nwl7"]
 
 [node name="inv_slot" type="Panel"]
 custom_minimum_size = Vector2(40, 40)
@@ -36,13 +34,3 @@ layout_mode = 2
 
 [node name="item" type="Sprite2D" parent="CenterContainer/Panel"]
 unique_name_in_owner = true
-z_index = 2
-script = ExtResource("3_t5qxk")
-
-[node name="select" type="Sprite2D" parent="CenterContainer/Panel"]
-unique_name_in_owner = true
-visible = false
-texture = ExtResource("4_7nwl7")
-
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

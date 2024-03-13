@@ -2,6 +2,7 @@ extends Panel
 
 @onready var backgroundSprite: Sprite2D = $background
 @onready var itemSprite: Sprite2D = %item
+@onready var selectSprite: Sprite2D = %select
 
 func update(item: InventoryItem):
 	if !item:
@@ -13,18 +14,18 @@ func update(item: InventoryItem):
 		itemSprite.texture = item.texture
 
 func set_drag(drag: bool):
-	%item.is_drag = drag
+	itemSprite.is_drag = drag
 	if !drag:
 		canсel_drag()
 
 func canсel_drag():
-	%item.position = Vector2(0,0)
+	itemSprite.position = Vector2(0,0)
 
 
 
 func _on_mouse_entered():
-	%select.visible = true
+	selectSprite.visible = true
 
 
 func _on_mouse_exited():
-	%select.visible = false
+	selectSprite.visible = false

@@ -128,7 +128,7 @@ size = Vector2(46, 53)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 4
-collision_mask = 10
+collision_mask = 26
 script = ExtResource("1_cn6pg")
 inventory = ExtResource("2_fxcua")
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgsb8dty0wqol"]
+
+[ext_resource type="Script" path="res://scenes/portal.gd" id="1_q2aaj"]
+
+[node name="Portal" type="Area2D"]
+collision_layer = 16
+collision_mask = 4
+script = ExtResource("1_q2aaj")
+
+[connection signal="body_entered" from="." to="." method="_on_player_entered"]

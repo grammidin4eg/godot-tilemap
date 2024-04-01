@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://oowpdeeqe02h"]
+[gd_scene load_steps=17 format=3 uid="uid://oowpdeeqe02h"]
 
 [ext_resource type="Texture2D" uid="uid://c6tprisp2wtj6" path="res://images/tile-set.png" id="1_a75g3"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_rso1x"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://inventory/InventoryLayer.gd" id="8_haeur"]
 [ext_resource type="PackedScene" uid="uid://kocdnotivy0m" path="res://inventory/item.tscn" id="10_5hbm4"]
 [ext_resource type="Resource" uid="uid://c3dwbnelemexp" path="res://inventory/poison_potion.tres" id="11_xtdwd"]
+[ext_resource type="PackedScene" uid="uid://cgsb8dty0wqol" path="res://scenes/portal.tscn" id="12_cc2mx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2qgr"]
 resource_name = "Атлас"
@@ -283,6 +284,9 @@ _data = {
 }
 point_count = 7
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ui6hu"]
+size = Vector2(70, 69)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_rso1x")
 
@@ -361,6 +365,14 @@ item = ExtResource("11_xtdwd")
 [node name="poison3" parent="." instance=ExtResource("10_5hbm4")]
 position = Vector2(1015, 438)
 item = ExtResource("11_xtdwd")
+
+[node name="Portal" parent="." instance=ExtResource("12_cc2mx")]
+position = Vector2(1248, 384)
+nextSceneName = "level_2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
+position = Vector2(50, 49.5)
+shape = SubResource("RectangleShape2D_ui6hu")
 
 [connection signal="change_health" from="Player" to="." method="_on_player_change_health"]
 [connection signal="use_item" from="CanvasLayer/InvPanel" to="." method="_on_inv_panel_use_item"]

@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="godot-tilemap"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0.980392, 0.980392, 0.980392, 1)
+boot_splash/image="res://images/loading_screen.png"
 config/icon="res://icon.svg"
 
 [input]

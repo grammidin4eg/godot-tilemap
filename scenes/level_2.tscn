@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://tvi65lbgquda"]
+[gd_scene load_steps=9 format=3 uid="uid://tvi65lbgquda"]
 
 [ext_resource type="Texture2D" uid="uid://c6tprisp2wtj6" path="res://images/tile-set.png" id="1_526tu"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_aokua"]
 [ext_resource type="PackedScene" uid="uid://dup78e1bt2hh5" path="res://scenes/player.tscn" id="2_m2tci"]
 [ext_resource type="PackedScene" uid="uid://bte3c36ykcjic" path="res://scenes/ui.tscn" id="3_rvtx5"]
 [ext_resource type="Script" path="res://inventory/InventoryLayer.gd" id="4_fcaxs"]
@@ -272,6 +273,7 @@ physics_layer_1/collision_mask = 4
 sources/1 = SubResource("TileSetAtlasSource_w2qgr")
 
 [node name="Level_2" type="Node2D"]
+script = ExtResource("1_aokua")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7eqlp")
@@ -303,3 +305,6 @@ offset_right = -31.0
 offset_bottom = -28.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[connection signal="change_health" from="Player" to="." method="_on_player_change_health"]
+[connection signal="use_item" from="CanvasLayer/InvPanel" to="." method="_on_inv_panel_use_item"]

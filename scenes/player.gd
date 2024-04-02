@@ -13,12 +13,13 @@ func _get_health() -> int:
 
 func _set_health(value: int) -> void:
 	health = value
+	PlayerVariables.health = value
 	change_health.emit(value)
 	if health < 1:
 		queue_free()
 
 func _ready():
-	health = 3;
+	health = PlayerVariables.health
 
 func _set_animation(action: String):
 	if Input.is_action_pressed(action):

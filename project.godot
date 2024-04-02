@@ -17,6 +17,10 @@ boot_splash/bg_color=Color(0.980392, 0.980392, 0.980392, 1)
 boot_splash/image="res://images/loading_screen.png"
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerVariables="*res://player_variables.gd"
+
 [input]
 
 left={
